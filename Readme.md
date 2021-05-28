@@ -33,10 +33,48 @@ Split solution into 3 projects
 - IColletion fields within Orders, Products, and Customer are exposed
 - Repository implementation didn't include a generic way of handling includes of collections contained within an entity.
 - The logic around checking whether products exist for a customers order should probably be part of the CreateOrder method, as I shouldn't rely on the developer to check for this every time they want to use that method.
+- Logic around stock levels was never done. The stock count field exists, and so is the quantity when a user makes an order, so the stock levels should be checked/reduced accordingly.
 
 ### How to run the application
 ```bash
 cd [[repo-location]]/ECommerceAPI
 dotnet run
 # Then go to https://localhost:5001/swagger for the swagger interface.
+```
+
+### Example data you can use to populate database
+
+_Product_ - [POST] /Product
+```json
+{
+  "costPerItem": 10,
+  "stockCount": 100,
+  "name": "Some really good Book",
+  "metaData": {
+    "Author": "Some really good author",
+    "Publisher": "Some really good publisher",
+    "PublishDate": "10-09-1994"
+  }
+}
+```
+
+_Customer_ - [POST] /Customer
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "email": "john-smith@john-smith.com"
+}
+```
+
+_Order_ - [POST] /Customer/1/order 
+```json
+{
+  "orderItem": [
+    {
+      "productId": 1,
+      "quantity": 10
+    }
+  ]
+}
 ```
