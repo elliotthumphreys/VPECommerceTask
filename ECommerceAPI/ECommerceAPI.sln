@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceAPI", "ECommerceAPI.csproj", "{5F258515-C0E5-4733-ACBD-9460A80B3F23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9446BFD8-AD27-4F98-A715-2D47D1585F51}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\Entity_Relationship_Diagram.PNG = ..\Entity_Relationship_Diagram.PNG
+		..\Readme.md = ..\Readme.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{8E257B60-AABB-455D-B7B6-9A99B045B10B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "..\DomainLogic\Domain.csproj", "{90CD7D3B-3A7C-40D1-AC29-D29811E378AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F258515-C0E5-4733-ACBD-9460A80B3F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F258515-C0E5-4733-ACBD-9460A80B3F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F258515-C0E5-4733-ACBD-9460A80B3F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F258515-C0E5-4733-ACBD-9460A80B3F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E257B60-AABB-455D-B7B6-9A99B045B10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E257B60-AABB-455D-B7B6-9A99B045B10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E257B60-AABB-455D-B7B6-9A99B045B10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E257B60-AABB-455D-B7B6-9A99B045B10B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90CD7D3B-3A7C-40D1-AC29-D29811E378AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90CD7D3B-3A7C-40D1-AC29-D29811E378AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90CD7D3B-3A7C-40D1-AC29-D29811E378AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90CD7D3B-3A7C-40D1-AC29-D29811E378AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B0E7753-CF32-4811-9198-6D384393AC81}
+	EndGlobalSection
+EndGlobal
