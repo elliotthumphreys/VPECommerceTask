@@ -11,13 +11,17 @@ Please create a .Net Core API that can receive some JSON representing a typical 
 Your solution will provide the basis for your technical interview where we will explore extending your solution given certain business challenges Please build the service as you would work normally.
 However, I'm providing the following video for reference around the approach we take to building services and domain-driven design.  If you get a chance it would be good to watch it, we don't expect you to watch the whole thing but there's a useful section between 15-25 mins that gives an example of the way we work. https://vimeo.com/43598193 - Jimmy Bogard - Crafting Wicked Domain Models.
 
-### Assumptions
+## Assumptions
 - No auth required
 - No sessions data required
 - Use of an in-memory database is okay. The in-memory database provider that is supported by EF Core is only loosely a 'database', it is not a relational database at all and thus provides no relational checking. If this was for the purpose of a production application then the In-Memory database provider would not be used as concurrency, referential integrity would be required. This is being used for the ease of running on other peoples machines without any prior setup.
 
+## The Solution
+
 ### Database Design
-See Entity_Relationship_Diagram.PNG
+_Some field names may have changed / not been included_
+
+![Entity_Relationship_Diagram](https://github.com/elliotthumphreys/VPECommerceTask/blob/main/Entity_Relationship_Diagram.PNG?raw=true)
 
 ### API Design
 Split solution into 3 projects
@@ -29,3 +33,10 @@ Split solution into 3 projects
 - IColletion fields within Orders, Products, and Customer are exposed
 - Repository implementation didn't include a generic way of handling includes of collections contained within an entity.
 - The logic around checking whether products exist for a customers order should probably be part of the CreateOrder method, as I shouldn't rely on the developer to check for this every time they want to use that method.
+
+### How to run the application
+```bash
+cd [[repo-location]]/ECommerceAPI
+dotnet run
+# Then go to https://localhost:5001/swagger for the swagger interface.
+```
