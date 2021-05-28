@@ -28,3 +28,4 @@ Split solution into 3 projects
 ### Improvements
 - IColletion fields within Orders, Products, and Customer are exposed
 - Repository implementation didn't include a generic way of handling includes of collections contained within an entity.
+- The logic around checking whether products exist for a customers order should probably be part of the CreateOrder method, as I shouldn't rely on the developer to check for this every time they want to use that method.
